@@ -10,6 +10,30 @@
   align-items: stretch;
   
 }
+
+.home h2{
+  color:white;
+  font-size:15px;
+  margin-top:5px;
+  margin-right:50px;
+}
+.adduser h2{
+  color:white;
+  font-size:15px;
+  margin-top:5px;
+  margin-right:961px;
+
+}
+h2{
+  margin:23px;
+  
+}
+li
+{
+  font-size:20px;
+  margin-bottom:12px;
+  
+}
 .radiocontainer
 {
   font-size: 18px;
