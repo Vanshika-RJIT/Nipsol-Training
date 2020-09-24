@@ -7,7 +7,7 @@ import { Component, VERSION } from '@angular/core';
 })
 export class AppComponent  {
   name = 'Angular ' + VERSION.major;
-  button1=false;
+  button1=true;
   button2=false;
   toggle()
   {
