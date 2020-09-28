@@ -10,7 +10,9 @@
   align-items: stretch;
   
 }
-
+.active{
+    border-bottom: 3px solid white;
+}
 
 .home h2{
   color:white;
