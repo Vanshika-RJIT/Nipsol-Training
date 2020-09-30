@@ -12,4 +12,4 @@ export class AppRoutingModule
 {
 
 }
-export const routingComponents = [HomeComponent,AddUserComponent]
+export const routingComponents = [HomeComponent,AddUserComponent];
