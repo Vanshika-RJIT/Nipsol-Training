@@ -10,6 +10,11 @@
   align-items: stretch;
   
 }
+input{
+  margin-top:-23px;
+  margin-left: 22px;
+  width: 145px;
+}
 .active{
     border-bottom: 5px solid white;
 }
@@ -65,12 +70,6 @@ h1
   padding-top: 33px;
   color: white;
   font-family: 'Fredoka One';
-}
-h4{
-   margin: 23px;
-   font-size:18px;
-   margin-top:-26px;
-   color:white;
 }
 h3
 {
