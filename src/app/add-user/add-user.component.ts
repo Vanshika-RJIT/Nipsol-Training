@@ -1,5 +1,6 @@
-import { Component, OnInit,Output,EventEmitter } from '@angular/core';
+import { Component, OnInit,Output,EventEmitter, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import {DataService} from '../data.service';
 
 
 @Component({
@@ -7,15 +8,17 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './add-user.component.html',
   styleUrls: ['./add-user.component.css']
 })
-export class AddUserComponent implements OnInit {
-  constructor(private route:ActivatedRoute) { }
+export class AddUserComponent implements OnInit,OnDestroy {
    name2:string="";
    name3:string="";
-   @Output()childEvent= new EventEmitter();
+    constructor(private route:ActivatedRoute,private data:DataService) { }
   ngOnInit() {
     this.name2=this.route.snapshot.params['foo'];
-    this.childEvent.emit(this.name3);
+    this.data.name3=this.name3;
+
   }
+  ngOnDestroy(){
    
+  } 
 
 }
