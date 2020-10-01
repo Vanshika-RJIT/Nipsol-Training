@@ -9,16 +9,17 @@ export class AppComponent  {
   name = 'Angular ' + VERSION.major;
   status:boolean=true;
   status1:boolean=false;
-  name1:any;
+  name1:string=" ";
+  name4:string=" ";
   clickEvent()
   {
-    this.status=!this.status;
+    this.status=true;
     this.status1=false;
 
   }
  clickEvent1()
   {
-    this.status1=!this.status1;
+    this.status1=true;
     this.status=false;
 
   }
