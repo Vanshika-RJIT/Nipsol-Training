@@ -13,10 +13,14 @@ export class AddUserComponent implements OnInit,OnDestroy {
    name3:string="";
     constructor(private route:ActivatedRoute,private data:DataService) { }
   ngOnInit() {
+    
     this.name2=this.route.snapshot.params['foo'];
-    this.data.name3=this.name3;
 
   }
+  sendMessage() {
+    this.data.sendMessage(this.name3)
+  }
+  
   ngOnDestroy(){
    
   } 

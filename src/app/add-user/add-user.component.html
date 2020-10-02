@@ -5,7 +5,7 @@
 		<div class="form-group row">
 			<label for="Name" class="col-lg-1 offset-lg-3 col-form-label ">Name</label>
 			<div class="col-lg-2">
-				<input type="text" [(ngModel)]="name3" value="{{name2}}"class="form-control form-control-sm" id="Name"/>
+				<input type="text" [(ngModel)]="name3"[ngModelOptions]="{standalone: true}" value="{{name2}}"(ngModelChange)="sendMessage()"class="form-control form-control-sm" id="Name"/>
     </div>
 			</div>
 			<div class="form-group row">

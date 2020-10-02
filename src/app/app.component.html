@@ -1,6 +1,6 @@
 <div class="container-fluid_decor">
 	<h1>Hello</h1>
-	<input type="text"[ngModel]="name1" (ngModelChange)="modelChangeFn($event)"value="{{name3}}"class="form-control form-control-sm" id="Name">
+	<input type="text"[(ngModel)]="name1"(ngModelChange)="modelChangeFn($event)"[ngModelOptions]="{standalone: true}"value="{{name3}}"class="form-control form-control-sm" id="Name">
 	
 </div>
 
