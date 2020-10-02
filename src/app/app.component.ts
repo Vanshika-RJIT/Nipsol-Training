@@ -17,9 +17,6 @@ export class AppComponent implements OnInit {
   {
 
   }
-  modelChangeFn(value) {
-    this.name1 = value;
-  }
   
   ngOnInit(){
     this.data.teacherMessage$.subscribe(message=>
@@ -27,7 +24,11 @@ export class AppComponent implements OnInit {
        this.name3=message;
     });
   }
-
+sendMessage() {
+    this.data.sendMessage(this.name1)
+  }
+  
+  
   clickEvent()
   {
     this.status=true;

@@ -8,21 +8,21 @@ import {DataService} from '../data.service';
   templateUrl: './add-user.component.html',
   styleUrls: ['./add-user.component.css']
 })
-export class AddUserComponent implements OnInit,OnDestroy {
+export class AddUserComponent implements OnInit {
    name2:string="";
    name3:string="";
     constructor(private route:ActivatedRoute,private data:DataService) { }
   ngOnInit() {
+     this.data.teacherMessage$.subscribe(message=>
+    {
+       this.name2=message;
+    });
     
-    this.name2=this.route.snapshot.params['foo'];
-
   }
   sendMessage() {
     this.data.sendMessage(this.name3)
   }
   
-  ngOnDestroy(){
-   
-  } 
+  
 
 }
