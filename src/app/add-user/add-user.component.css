@@ -9,6 +9,11 @@ input
   border-radius:10px;
 
 }
+.errors{
+  font-size:12px;
+  color:red;
+
+}
 .button {
   width:150px;
   height:40px;

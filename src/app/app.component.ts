@@ -18,6 +18,7 @@ export class AppComponent implements OnInit {
   {
 
   }
+
   
   ngOnInit(){
     this.data.teacherMessage$.subscribe(message=>
