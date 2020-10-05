@@ -10,11 +10,11 @@
   align-items: stretch;
   
 }
-input{
-  margin-top:-23px;
-  margin-left: 22px;
-  width: 145px;
-  border: 2px solid black;
+h4{
+   margin: 23px;
+   font-size:18px;
+   margin-top:-20px;
+   color:white;
 }
 .active{
     border-bottom: 5px solid white;
