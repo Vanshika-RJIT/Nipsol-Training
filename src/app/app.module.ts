@@ -6,10 +6,11 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { AppRoutingModule,routingComponents } from './app-routing.module';
 import { DataService } from './data.service';
+import { AllUsersComponent } from './all-users/all-users.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,AppRoutingModule ],
-  declarations: [ AppComponent, HelloComponent,routingComponents],
+  declarations: [ AppComponent, HelloComponent,routingComponents, AllUsersComponent],
   bootstrap:    [ AppComponent ],
   providers:[DataService]
 })

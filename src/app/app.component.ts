@@ -11,6 +11,7 @@ export class AppComponent implements OnInit {
   name = 'Angular ' + VERSION.major;
   status:boolean=true;
   status1:boolean=false;
+  status2:boolean=false;
   name1:string=" ";
   name3:string="";
   constructor(private data:DataService)
@@ -33,13 +34,20 @@ sendMessage() {
   {
     this.status=true;
     this.status1=false;
+    this.status2=false;
 
   }
  clickEvent1()
   {
     this.status1=true;
     this.status=false;
+    this.status2=false;
 
+  }
+  clickEvent2(){
+     this.status2=true;
+    this.status=false;
+    this.status1=false;
   }
  
 }
