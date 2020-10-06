@@ -10,7 +10,7 @@ import { AllUsersComponent } from './all-users/all-users.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,AppRoutingModule,ReactiveFormsModule],
-  declarations: [ AppComponent, HelloComponent,routingComponents, AllUsersComponent],
+  declarations: [ AppComponent, HelloComponent,routingComponents],
   bootstrap:    [ AppComponent ],
   providers:[DataService]
 })

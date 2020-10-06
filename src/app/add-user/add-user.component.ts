@@ -10,10 +10,11 @@ import { FormBuilder,FormGroup,Validators} from '@angular/forms';
   styleUrls: ['./add-user.component.css']
 })
 export class AddUserComponent implements OnInit {
-   name2:string="";
-   name3:string="";
+  //  name2:string="";
+  //  name3:string="";
    id:number;
    reactiveForm:FormGroup;
+   submitted=false;
     constructor(private fb:FormBuilder, route:ActivatedRoute,private data:DataService) { }
   ngOnInit() {
     //  this.data.teacherMessage$.subscribe(message=>
@@ -28,11 +29,19 @@ export class AddUserComponent implements OnInit {
     });
     
   }
-
-  submit()
-  {
-    console.log(this.reactiveForm);
+   get registerFormControl() {
+    return this.reactiveForm.controls;
   }
+  
+  onSubmit() {
+    this.submitted = true;
+    if (this.reactiveForm.valid) {
+      console.log(this.reactiveForm.value);
+    }
+  }
+
+
+ 
     
   // sendMessage() {
   //   this.data.sendMessage(this.name3)

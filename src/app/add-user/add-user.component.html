@@ -1,12 +1,15 @@
 <div class="container-fluid">
 	<h5>User Registration</h5>
 </div>
-<form [formGroup]="reactiveForm">  
+<form [formGroup]="reactiveForm">
 	<div class="form-group row">
 		<label for="Name" class="col-lg-1 offset-lg-3 col-form-label ">Name</label>
 		<div class="col-lg-2">
 			<input type="text" class="form-control form-control-sm" id="Name" formControlName="Name" />
-
+			<span class="text-danger"
+         *ngIf="(registerFormControl.Name.touched || submitted) && registerFormControl.Name.errors?.required">
+                                Name is required
+                            </span>
 		</div>
 
 	</div>
@@ -14,37 +17,57 @@
 		<label for="Email"  class="col-lg-1 offset-lg-3 col-form-label">Email</label>
 		<div class="col-lg-2">
 			<input type="text"class="form-control form-control-sm" id="Email" formControlName="Email" >
+			<span class="text-danger"
+     *ngIf="(registerFormControl.Email.touched || submitted) && registerFormControl.Email.errors?.required">
+            Email is required
+                            </span>
+			<span class="text-danger"
+        *ngIf="registerFormControl.Email.touched && registerFormControl.Email.errors?.email">
+          Enter a valid email address
+                            </span>
 		</div>
 	</div>
 	<div class="form-group row">
 		<label for="Phone" class="col-lg-1 offset-lg-3 col-form-label ">Phone</label>
 		<div class="col-lg-2">
 			<input type="text"  class="form-control form-control-sm" id="Phone" formControlName="Phone">
+      	<span class="text-danger"
+     *ngIf="(registerFormControl.Phone.touched || submitted) && registerFormControl.Phone.errors?.required">
+            Phone Number is required
+                            </span>
+			<span class="text-danger"
+        *ngIf="registerFormControl.Phone.touched && registerFormControl.Phone.errors?.maxlength||registerFormControl.Phone.touched && registerFormControl.Phone.errors?.minlength">
+          Enter a valid Phone Number
+                            </span>
 		</div>
-	</div>
-	<div class="form-group row">
-		<label for="Address" class="col-lg-1 offset-lg-3 col-form-label ">Address</label>
-		<div class="col-lg-2">
-			<input type="text"class="form-control  form-control-sm " id="Address" formControlName="Address">
 		</div>
-	</div>
-	<div class="form-group row">
-		<div class="radio col-lg-1 offset-lg-3">
-			Gender
+		<div class="form-group row">
+			<label for="Address" class="col-lg-1 offset-lg-3 col-form-label ">Address</label>
+			<div class="col-lg-2">
+				<input type="text"class="form-control  form-control-sm " id="Address" formControlName="Address">
+        	<span class="text-danger"
+     *ngIf="(registerFormControl.Address.touched || submitted) && registerFormControl.Address.errors?.required">
+            Address is required
+                            </span>
 		</div>
-		<div class="col-lg-6">
-			<label class="radiocontainer">
+			</div>
+			<div class="form-group row">
+				<div class="radio col-lg-1 offset-lg-3">
+					Gender
+				</div>
+				<div class="col-lg-6">
+					<label class="radiocontainer">
 				<input type="radio" name="gender" value="Male"  checked  >Male
           </label>
-			<label class="radiocontainer1 ml-5">
+					<label class="radiocontainer1 ml-5">
 				<input type="radio" name="gender" value="Female">Female
           </label>
-		</div>
-	</div>
-	<div class="col-lg-8 offset-lg-3">
-		<button type="reset" class="btn-primary button btn-lg  ml-0.1"style=" background-color:#343123;">RESET</button>
-		<button type="submit" class="button btn-secondary btn-lg ml-3"(click)="submit()" style=" background-color:#9E6DF7;">SUBMIT</button>
-	</div>
+				</div>
+			</div>
+			<div class="col-lg-8 offset-lg-3">
+				<button type="reset" class="btn-primary button btn-lg  ml-0.1"(click)="reactiveForm.reset()"style=" background-color:#343123;">RESET</button>
+				<button type="submit" class="button btn-secondary btn-lg ml-3"(click)="onSubmit()" style=" background-color:#9E6DF7;">SUBMIT</button>
+			</div>
 
 
 </form>
