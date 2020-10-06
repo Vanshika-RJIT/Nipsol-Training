@@ -1,15 +1,20 @@
 import {Injectable} from '@angular/core';
 import {Subject} from 'rxjs';
-@Injectable()
+import {dataModel} from './dataModel';
+@Injectable(
+  {
+    providedIn:'root'
+  }
+)
 export class DataService{
  
-  private _teacherMessageSource= new Subject <string>();
+  private _teacherMessageSource= new Subject <dataModel>();
   teacherMessage$ = this._teacherMessageSource.asObservable();
   constructor()
   { }
-  sendMessage(message:string)
+  addUser(user:dataModel)
   {
-    this._teacherMessageSource.next(message);                            
+    this._teacherMessageSource.next(user);                            
 
   }
 

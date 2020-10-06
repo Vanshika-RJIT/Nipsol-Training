@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { AppRoutingModule,routingComponents } from './app-routing.module';
 import { DataService } from './data.service';
-import { AllUsersComponent } from './all-users/all-users.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,AppRoutingModule,ReactiveFormsModule],

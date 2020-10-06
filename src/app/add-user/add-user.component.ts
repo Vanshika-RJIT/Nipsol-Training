@@ -1,6 +1,7 @@
 import { Component, OnInit,Output,EventEmitter, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import {DataService} from '../data.service';
+import {dataModel} from '../dataModel';
 import { FormBuilder,FormGroup,Validators} from '@angular/forms';
 
 
@@ -21,6 +22,7 @@ export class AddUserComponent implements OnInit {
     // {
     //    this.name2=message;
     // });
+    // this.id=0;
     this.reactiveForm=this.fb.group({
        Name:['', Validators.required],
        Email:['', [Validators.required, Validators.email]],
@@ -35,8 +37,12 @@ export class AddUserComponent implements OnInit {
   
   onSubmit() {
     this.submitted = true;
+    // this.id+=1;
     if (this.reactiveForm.valid) {
       console.log(this.reactiveForm.value);
+      const newUser= new dataModel(this.reactiveForm.value['Name'],this.reactiveForm.value['Email'],this.reactiveForm.value['Phone'],this.reactiveForm.value['Address']);
+      this.data.addUser(newUser);
+
     }
   }
 
