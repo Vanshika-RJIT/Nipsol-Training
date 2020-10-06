@@ -14,6 +14,7 @@ export class AddUserComponent implements OnInit {
   //  name2:string="";
   //  name3:string="";
    id:number;
+
    reactiveForm:FormGroup;
    submitted=false;
   //  emailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
