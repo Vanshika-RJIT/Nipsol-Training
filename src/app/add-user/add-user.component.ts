@@ -16,6 +16,8 @@ export class AddUserComponent implements OnInit {
    id:number;
    reactiveForm:FormGroup;
    submitted=false;
+  //  emailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
+  //  phoneNumber = "^(\+\d{1,3}[- ]?)?\d{10}$";
     constructor(private fb:FormBuilder, route:ActivatedRoute,private data:DataService) { }
   ngOnInit() {
     //  this.data.teacherMessage$.subscribe(message=>
