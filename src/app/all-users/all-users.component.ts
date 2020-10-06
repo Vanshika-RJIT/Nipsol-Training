@@ -8,15 +8,15 @@ import {dataModel} from '../dataModel';
   styleUrls: ['./all-users.component.css']
 })
 export class AllUsersComponent implements OnInit {
-      user:dataModel;
+      // user:dataModel;
   constructor(private data:DataService) { }
 
   ngOnInit() {
-    this.data. teacherMessage$.subscribe((user:dataModel)=>
-    {
-      this.user=user;
-      console.log(user);
-    });
+    // this.data. teacherMessage$.subscribe((user:dataModel)=>
+    // {
+    //   this.user=user;
+   
+    // });
   }
   
 

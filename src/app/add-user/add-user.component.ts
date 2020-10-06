@@ -22,7 +22,7 @@ export class AddUserComponent implements OnInit {
     // {
     //    this.name2=message;
     // });
-    // this.id=0;
+    this.id=0;
     this.reactiveForm=this.fb.group({
        Name:['', Validators.required],
        Email:['', [Validators.required, Validators.email]],
@@ -37,10 +37,10 @@ export class AddUserComponent implements OnInit {
   
   onSubmit() {
     this.submitted = true;
-    // this.id+=1;
+    this.id+=1;
     if (this.reactiveForm.valid) {
       console.log(this.reactiveForm.value);
-      const newUser= new dataModel(this.reactiveForm.value['Name'],this.reactiveForm.value['Email'],this.reactiveForm.value['Phone'],this.reactiveForm.value['Address']);
+      const newUser= new dataModel(this.id,this.reactiveForm.value['Name'],this.reactiveForm.value['Email'],this.reactiveForm.value['Phone'],this.reactiveForm.value['Address']);
       this.data.addUser(newUser);
 
     }
