@@ -1,7 +1,7 @@
 import { Component, OnInit,Output,EventEmitter, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import {DataService} from '../data.service';
-import { FormBuilder,FormGroup } from '@angular/forms';
+import { FormBuilder,FormGroup,Validators} from '@angular/forms';
 
 
 @Component({
@@ -21,13 +21,14 @@ export class AddUserComponent implements OnInit {
     //    this.name2=message;
     // });
     this.reactiveForm=this.fb.group({
-       Name:[],
-       Email:[],
-       Phone:[],
-       Address:[]   
+       Name:['', Validators.required],
+       Email:['', [Validators.required, Validators.email]],
+       Phone:['', [Validators.required,Validators.maxLength(10),Validators.minLength(10)]],
+       Address:['', Validators.required]   
     });
     
   }
+
   submit()
   {
     console.log(this.reactiveForm);
