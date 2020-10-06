@@ -1,4 +1,5 @@
 import { Component, OnInit,  VERSION } from '@angular/core';
+
 import { DataService } from './data.service';
 
 
@@ -14,21 +15,17 @@ export class AppComponent implements OnInit {
   status2:boolean=false;
   name1:string=" ";
   name3:string="";
-  constructor(private data:DataService)
-  {
-
-  }
-
   
   ngOnInit(){
-    this.data.teacherMessage$.subscribe(message=>
-    {
-       this.name3=message;
-    });
+    // this.data.teacherMessage$.subscribe(message=>
+    // {
+    //    this.name3=message;
+    // });
+   
   }
-sendMessage() {
-    this.data.sendMessage(this.name1)
-  }
+// sendMessage() {
+//     this.data.sendMessage(this.name1)
+//   }
   
   
   clickEvent()

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
@@ -9,7 +9,7 @@ import { DataService } from './data.service';
 import { AllUsersComponent } from './all-users/all-users.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule,AppRoutingModule ],
+  imports:      [ BrowserModule, FormsModule,AppRoutingModule,ReactiveFormsModule],
   declarations: [ AppComponent, HelloComponent,routingComponents, AllUsersComponent],
   bootstrap:    [ AppComponent ],
   providers:[DataService]
