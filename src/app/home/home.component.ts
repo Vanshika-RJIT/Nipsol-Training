@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {DataService} from '../data.service';
-import {dataModel} from '../dataModel';
 
 @Component({
   selector: 'app-home',
@@ -9,16 +7,10 @@ import {dataModel} from '../dataModel';
 })
 export class HomeComponent implements OnInit {
 
-  user:dataModel;
-  constructor(private data:DataService) { }
+  
+  constructor() { }
 
   ngOnInit() {
-    this.data. teacherMessage$.subscribe((user:dataModel)=>
-    {
-      this.user=user;
-      console.log(this.user);
-   
-    });
   }
   }
 

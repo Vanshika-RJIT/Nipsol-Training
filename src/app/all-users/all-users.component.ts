@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Input, EventEmitter, Output} from '@angular/core';
 import {DataService} from '../data.service';
 import {dataModel} from '../dataModel';
 
@@ -8,16 +8,16 @@ import {dataModel} from '../dataModel';
   styleUrls: ['./all-users.component.css']
 })
 export class AllUsersComponent implements OnInit {
-      // user:dataModel;
-  constructor(private data:DataService) { }
+      user:dataModel;
+  constructor(private data:DataService) { }  
 
   ngOnInit() {
     // this.data. teacherMessage$.subscribe((user:dataModel)=>
     // {
     //   this.user=user;
    
-    // });
-  }
-  
+    // })
+    // ;
+  }   
 
-}
+}  

@@ -1,6 +1,7 @@
 import { Component, OnInit,  VERSION } from '@angular/core';
 
 import { DataService } from './data.service';
+import {dataModel} from './dataModel';
 
 
 @Component({
@@ -15,12 +16,21 @@ export class AppComponent implements OnInit {
   status2:boolean=false;
   name1:string=" ";
   name3:string="";
-  
+  user:dataModel;
+   constructor( private data:DataService) { }
+ 
   ngOnInit(){
     // this.data.teacherMessage$.subscribe(message=>
     // {
     //    this.name3=message;
     // });
+      this.data. teacherMessage$.subscribe((user:dataModel)=>
+    {
+      this.user=user;
+      console.log(this.user);
+   
+    });
+  
    
   }
 // sendMessage() {

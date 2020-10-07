@@ -11,6 +11,8 @@ import { FormBuilder,FormGroup,Validators} from '@angular/forms';
   styleUrls: ['./add-user.component.css']
 })
 export class AddUserComponent implements OnInit {
+  @Output() tabledataValues=new EventEmitter<string>();
+
   //  name2:string="";
   //  name3:string="";
    id:number;
@@ -39,7 +41,7 @@ export class AddUserComponent implements OnInit {
   }
   
   onSubmit() {
-    this.submitted = true;
+    this.submitted=false;
     this.id+=1;
     if (this.reactiveForm.valid) {
       console.log(this.reactiveForm.value);
@@ -48,9 +50,6 @@ export class AddUserComponent implements OnInit {
 
     }
   }
-
-
- 
     
   // sendMessage() {
   //   this.data.sendMessage(this.name3)
