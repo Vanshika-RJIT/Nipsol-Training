@@ -1,11 +1,13 @@
 
-<div class="card shadow-lg  bg-white " style="width: 21rem; height:200px;margin-top:19px; margin-left:21px;">
-	<div class="card-body m-10">
-		<div class="card-text" *ngFor="let user of allUsersArray">
-      <h5 class="card-title">{{ user.id }}. {{ user.name }}</h5>
-        <h5 class="card-title">{{ user.email }}</h5>
-          <h5 class="card-title">{{ user.phone }}</h5>
-            <h5 class="card-title">{{user.address}}</h5>
-      <div>
-	</div>
-</div>
+<div class="row p-3 px-3">
+	<div class="col-sm-4 card-body border border-secondary m-3 bg-white"
+		style="border-radius: 10px; border:1px; box-shadow: 10px 10px 0px 7px rgba(143,136,143,1);"
+		*ngFor="let user of allUsersArray; index as i">
+		<div class="card-text">
+			<h5 class="card-title">{{ i+1 }}. {{ user.name }}</h5>
+			<h5 class="card-title">{{ user.email }}</h5>
+			<h5 class="card-title">{{ user.phone }}</h5>
+			<h5 class="card-title">{{user.address}}</h5>
+			<div>
+			</div>
+		</div>
