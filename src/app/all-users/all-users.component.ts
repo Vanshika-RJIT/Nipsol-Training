@@ -9,6 +9,7 @@ import {dataModel} from '../dataModel';
 })
 export class AllUsersComponent implements OnInit {
       user:dataModel;
+      allUsersArray:any[]=[];
   constructor(private data:DataService) { }  
 
   ngOnInit() {
@@ -18,6 +19,8 @@ export class AllUsersComponent implements OnInit {
    
     // })
     // ;
+    this.allUsersArray=this.data.allUsersArray;
+    console.log(this.allUsersArray);
   }   
 
 }  

@@ -24,12 +24,12 @@ export class AppComponent implements OnInit {
     // {
     //    this.name3=message;
     // });
-      this.data. teacherMessage$.subscribe((user:dataModel)=>
-    {
-      this.user=user;
-      console.log(this.user);
+    //   this.data. teacherMessage$.subscribe((user:dataModel)=>
+    // {
+    //   this.user=user;
+    //   console.log(this.user);
    
-    });
+    // });
   
    
   }

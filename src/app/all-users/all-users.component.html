@@ -1,10 +1,18 @@
-<!-- <div class="container">
-<div class="row">
-    <div class="col-md-12">
-        <h3>You've created your profile!</h3>
-        <p>Name: {{ user.name }}</p>
-        <p>E-mail: {{ user.email }}</p>
-        <p>Phone: {{ user.phone}}</p>
-        <p>Address: {{ user.address }}</p>
-    </div>
-</div> -->
+<!-- <tbody>  
+      <tr *ngFor="let product of allUsersArray">  
+          <td>{{ product.name }}</td>  
+          <td>{{ product.email }}</td>  
+          <td>{{ product.phone }}</td>  
+
+      </tr>  
+  </tbody>   -->
+<div class="card shadow-lg  bg-white " style="width: 21rem; height:200px;margin-top:19px; margin-left:21px;">
+	<div class="card-body m-10">
+		<div class="card-text" *ngFor="let user of allUsersArray">
+      <h5 class="card-title">{{ user.id }}. {{ user.name }}</h5>
+        <h5 class="card-title">{{ user.email }}</h5>
+          <h5 class="card-title">{{ user.phone }}</h5>
+            <h5 class="card-title">{{user.address}}</h5>
+      <div>
+	</div>
+</div>

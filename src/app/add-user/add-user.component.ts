@@ -43,11 +43,12 @@ export class AddUserComponent implements OnInit {
     this.submitted=true;
     this.id+=1;
     if (this.reactiveForm.valid) {
-      console.log(this.reactiveForm.value);
+
       const newUser= new dataModel(this.id,this.reactiveForm.value['Name'],this.reactiveForm.value['Email'],this.reactiveForm.value['Phone'],this.reactiveForm.value['Address']);
       this.data.addUser(newUser);
 
     }
+    
   }
     
   // sendMessage() {

@@ -7,14 +7,13 @@ import {dataModel} from './dataModel';
   }
 )
 export class DataService{
+  allUsersArray:any[]=[];
  
-  private _teacherMessageSource= new Subject <dataModel>();
-  teacherMessage$ = this._teacherMessageSource.asObservable();
   constructor()
   { }
   addUser(user:dataModel)
   {
-    this._teacherMessageSource.next(user);                            
+    this.allUsersArray.push(user);                            
 
   }
 
