@@ -1,59 +1,31 @@
 <div class="container-fluid_decor">
 	<h1>nipsol</h1>
 	<h4>CONTACTLESS ORDERING</h4>
+	
 </div>
 
 <div class="flex-container">
+    <div class="home">
+        <a  style="text-decoration: none;"[routerLink]="['/']"routerLinkActive="active"><h2 (click)="clickEvent()"[ngClass]="status ? 'active':' '">HOME</h2></a>
+		</div>
+    <div class="adduser">
+        <a style="text-decoration: none;"[routerLink]="['/AddUser']"routerLinkActive="active"><h2 (click)="clickEvent1()"[ngClass]="status1 ? 'active':' '">+ADD USER</h2></a>
+		</div>
+     <div class="allusers">
+        <a style="text-decoration: none;"[routerLink]="['/AllUsers']"routerLinkActive="active"><h2 (click)="clickEvent2()"[ngClass]="status2 ? 'active':' '">ALL USERS</h2></a>
+		</div>
+     <div class="covidmeter">
+        <a style="text-decoration: none;"[routerLink]="['/CovidMeter']"routerLinkActive="active"><h2 (click)="clickEvent3()"[ngClass]="status3 ? 'active':' '">COVID METER</h2></a>
+		</div>
 	<div>
-		<img src="https://trello-attachments.s3.amazonaws.com/5f53991ab0d38d18352ceba9/5f54d58d2a8eca11696208d1/7c54014642db96fc326015569a598fbe/nipsol_favicon.png" /></div>
+		<img src="https://trello-attachments.s3.amazonaws.com/5f53991ab0d38d18352ceba9/5f5722622a9c4f349d87d408/x/3f074143e4456fb8a4b40df2917fe2b2/nipsol_favicon.png" /></div>
 		<div class="link">
 			<p>www.nipsol.com</p>
-		</div>
+        </div>
+      
 	</div>
-	<div class="container-fluid">
-		<h5>User Registration</h5>
-	</div>
-	<form>
-		<div class="form-group row">
-			<label for="Name" class="col-lg-1 offset-lg-3 col-form-label ">Name</label>
-			<div class="col-lg-2">
-				<input type="text" class="form-control form-control-sm" id="Name">
-    </div>
-			</div>
-			<div class="form-group row">
-				<label for="Email"  class="col-lg-1 offset-lg-3 col-form-label">Email</label>
-				<div class="col-lg-2">
-					<input type="text" class="form-control form-control-sm" id="Email">
-    </div>
-				</div>
-				<div class="form-group row">
-					<label for="Phone" class="col-lg-1 offset-lg-3 col-form-label ">Phone</label>
-					<div class="col-lg-2">
-						<input type="text" class="form-control form-control-sm" id="Phone">
-    </div>
-					</div>
-					<div class="form-group row">
-						<label for="Address" class="col-lg-1 offset-lg-3 col-form-label ">Address</label>
-						<div class="col-lg-2">
-							<input type="text" class="form-control  form-control-sm " id="Address">
-    </div>
-						</div>
-						<div class="form-group row">
-							<div class="radio col-lg-1 offset-lg-3">
-								Gender
-							</div>
-							<div class="col-lg-6">
-								<label class="radiocontainer">
-				<input type="radio" name="gender" value="Male"  checked  >Male
-          </label>
-								<label class="radiocontainer1 ml-5">
-				<input type="radio" name="gender" value="Female">Female
-          </label>
-							</div>
-						</div>
-						<div class="col-lg-8 offset-lg-3">
-							<button type="button" class="btn-primary button btn-lg  ml-0.1" style=" background-color:#343123;">RESET</button>
-							<button type="button" class="button btn-secondary btn-lg ml-3" style=" background-color:#9E6DF7;">SUBMIT</button>
-						</div>
 
-	</form>
+ 
+ <router-outlet ></router-outlet>
+  
+  
