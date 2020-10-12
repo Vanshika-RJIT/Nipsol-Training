@@ -20,9 +20,9 @@ export class DataCovidService{
     {
       return this.http.get<IData[]>(this.url);
     }
-    getWorldData():Observable<IWorldData[]>
+    getWorldData():Observable<IWorldData>
     {
-      return this.http.get<IWorldData[]>(this.url1);
+      return this.http.get<IWorldData>(this.url1);
     }
 
 }
