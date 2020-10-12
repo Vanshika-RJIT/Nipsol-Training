@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import { HttpClient,HttpErrorResponse} from '@angular/common/http';
 import {IData} from './data';
 import {Observable} from 'rxjs';
+import { IWorldData } from './WorldData';
 @Injectable(
   {
     providedIn:'root'
@@ -9,6 +10,7 @@ import {Observable} from 'rxjs';
 )
 export class DataCovidService{
   private url:string="https://api.covid19api.com/countries";
+  private url1:string="https://api.covid19api.com/world/total";
  
   constructor(private http:HttpClient)
   { 
@@ -18,10 +20,9 @@ export class DataCovidService{
     {
       return this.http.get<IData[]>(this.url);
     }
-    // errorHandler(error:HttpErrorResponse)
-    // {
-    //   return Observable.throw(error.message||"Server Error");
-
-    // }
+    getWorldData():Observable<IWorldData[]>
+    {
+      return this.http.get<IWorldData[]>(this.url1);
+    }
 
 }
