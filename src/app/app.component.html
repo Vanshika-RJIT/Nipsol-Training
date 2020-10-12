@@ -14,6 +14,9 @@
      <div class="allusers">
         <a style="text-decoration: none;"[routerLink]="['/AllUsers']"routerLinkActive="active"><h2 (click)="clickEvent2()"[ngClass]="status2 ? 'active':' '">ALL USERS</h2></a>
 		</div>
+     <div class="covidmeter">
+        <a style="text-decoration: none;"[routerLink]="['/CovidMeter']"routerLinkActive="active"><h2 (click)="clickEvent3()"[ngClass]="status3 ? 'active':' '">COVID METER</h2></a>
+		</div>
 	<div>
 		<img src="https://trello-attachments.s3.amazonaws.com/5f53991ab0d38d18352ceba9/5f5722622a9c4f349d87d408/x/3f074143e4456fb8a4b40df2917fe2b2/nipsol_favicon.png" /></div>
 		<div class="link">
@@ -21,15 +24,6 @@
         </div>
       
 	</div>
-  <!-- <div class="container">
-<div class="row">
-    <div class="col-md-12">
-        <p>Name: {{ user.name }}</p>
-        <p>E-mail: {{ user.email }}</p>
-        <p>Phone: {{ user.phone}}</p>
-        <p>Address: {{ user.address }}</p>
-    </div>
-</div> -->
 
  
  <router-outlet ></router-outlet>
