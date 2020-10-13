@@ -15,5 +15,5 @@ export class CovidMeterComponent implements OnInit {
     this.dataCovid.getCountries().subscribe(data=>this.countries=data);
     this.dataCovid.getWorldData().subscribe(data1=>this.worlddata=data1);
   }
-
+  
 }

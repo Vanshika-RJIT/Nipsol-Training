@@ -13,12 +13,6 @@ export class AllUsersComponent implements OnInit {
   constructor(private data:DataService) { }  
 
   ngOnInit() {
-    // this.data. teacherMessage$.subscribe((user:dataModel)=>
-    // {
-    //   this.user=user;
-   
-    // })
-    // ;
     this.allUsersArray=this.data.allUsersArray;
     console.log(this.allUsersArray);
   }   
