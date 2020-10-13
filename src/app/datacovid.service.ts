@@ -11,7 +11,7 @@ import { IWorldData } from './WorldData';
 export class DataCovidService{
   private url:string="https://api.covid19api.com/countries";
   private url1:string="https://api.covid19api.com/world/total";
- 
+  
   constructor(private http:HttpClient)
   { 
     
