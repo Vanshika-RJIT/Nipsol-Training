@@ -2,7 +2,7 @@
 	<div class="col-sm-10">
 <label  style="margin:20px; padding:20px;"for="Countries"><h5>Select Country</h5></label>
 
-<select style="width:200px; height:35px; border:2px solid #f0f0f5; border-radius:3px; padding-left:6px;" id="Countries">
+<select style="width:200px; height:35px; border:2px solid #f0f0f5; border-radius:3px; padding-left:6px;" id="Countries" onchange="selectValue();">
   <option value="Enter">Enter a Country</option>
    <option *ngFor="let country of countries"[value]="country.Slug">{{country.Country}}</option>
 
@@ -13,5 +13,4 @@
 <span class="dot2"><h6>{{worlddata.TotalDeaths}}</h6></span>
 <span class="dot3"><h6>{{worlddata.TotalRecovered}}</h6></span>
 </div>
-
 
