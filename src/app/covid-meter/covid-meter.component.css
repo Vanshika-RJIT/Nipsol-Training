@@ -12,6 +12,20 @@
    margin-left:30px;
   
 }
+.differentTable, .differentTable td,.differentTable th{
+   border-color: black;
+}
+.table td,.table th{
+  margin-left:15px;
+  padding:9px;
+  font-weight:500;
+}
+thead
+{
+  font-size: 20px;
+ 
+}
+
 .dot2{
   height: 20px;
   width: 20px;
