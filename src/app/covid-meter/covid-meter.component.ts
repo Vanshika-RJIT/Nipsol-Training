@@ -13,6 +13,7 @@ export class CovidMeterComponent implements OnInit {
   public tabledata:any=[];
   public idselected:string;
   show:boolean=false;
+  order: string = 'tabledata.Date';
    OnIdSelected(event:any)
   { this.idselected=event.target.value;
    console.log( this.idselected);
