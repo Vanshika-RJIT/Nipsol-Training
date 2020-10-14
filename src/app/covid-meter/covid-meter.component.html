@@ -13,7 +13,7 @@
 <span class="dot2"><h6>{{worlddata.TotalDeaths}}</h6></span>
 <span class="dot3"><h6>{{worlddata.TotalRecovered}} </h6></span>
 </div>
-<div class="container mt-2">
+<div *ngIf="show"class="container mt-2">
   <div class="table-responsive-sm">
 <table class="table table-bordered differentTable">
   <thead class="table-active">

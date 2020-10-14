@@ -12,11 +12,13 @@ export class CovidMeterComponent implements OnInit {
   public worlddata;
   public tabledata:any=[];
   public idselected:string;
+  show:boolean=false;
    OnIdSelected(event:any)
   { this.idselected=event.target.value;
    console.log( this.idselected);
    this.dataCovid.setMessage(this.idselected).subscribe(data2=>this.tabledata=data2);
    console.log(this.tabledata);
+   this.show=true;
 
 data2=>this.tabledata=data2
   }
