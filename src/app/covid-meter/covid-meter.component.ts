@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ITableData } from '../covidtabledata';
 import { DataCovidService } from '../datacovid.service';
 
 @Component({
@@ -9,13 +10,15 @@ import { DataCovidService } from '../datacovid.service';
 export class CovidMeterComponent implements OnInit {
   public countries=[];
   public worlddata;
+  public tabledata:any=[];
   public idselected:string;
    OnIdSelected(event:any)
   { this.idselected=event.target.value;
    console.log( this.idselected);
-   this.dataCovid.setMessage(this.idselected);
+   this.dataCovid.setMessage(this.idselected).subscribe(data2=>this.tabledata=data2);
+   console.log(this.tabledata);
 
-
+data2=>this.tabledata=data2
   }
   constructor(private dataCovid:DataCovidService) { }
 

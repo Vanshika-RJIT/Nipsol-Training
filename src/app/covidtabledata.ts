@@ -1,4 +1,4 @@
-export interface TableData{
+export interface ITableData{
              date:any ,
              totalcases:number,
              active:number,

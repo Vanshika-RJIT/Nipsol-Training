@@ -3,16 +3,15 @@
 <label  style="margin:20px; padding:20px;"for="Countries"><h5>Select Country</h5></label>
 
 <select style="width:200px; height:35px; border:2px solid #f0f0f5; border-radius:3px; padding-left:6px;" id="Countries" 
- (change)="OnIdSelected($event)">
+ (change)="OnIdSelected($event) ">
   <option value="Enter">Enter a Country</option>
    <option *ngFor="let country of countries" value="{{country.Slug}}">{{country.Country}}</option>
 
 </select>
-
 </div>
  <span class="dot1"><h6>{{worlddata.TotalConfirmed}}</h6></span>
 <span class="dot2"><h6>{{worlddata.TotalDeaths}}</h6></span>
-<span class="dot3"><h6>{{worlddata.TotalRecovered}}</h6></span>
+<span class="dot3"><h6>{{worlddata.TotalRecovered}} </h6></span>
 </div>
 <div class="container mt-2">
   <div class="table-responsive-sm">
@@ -27,30 +26,16 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>1</td>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+    <tr *ngFor="let data of tabledata">
+      <td>{{data.Date}}</td>
+      <td>{{data.Confirmed}}</td>
+      <td>{{data.Active}}</td>
+       <td>{{data.Recovered}}</td>
+      <td>{{data.Deaths}}</td>
+
     </tr>
-    <tr>
-      <td >2</td>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-     <tr>
-      <td>1</td>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-      <tr>
-      <td >1</td>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
+    
+  
   </tbody>
 </table>
 </div>
