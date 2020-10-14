@@ -13,6 +13,7 @@ export class CovidMeterComponent implements OnInit {
    OnIdSelected(event:any)
   { this.idselected=event.target.value;
    console.log( this.idselected);
+   this.dataCovid.setMessage(this.idselected);
 
 
   }

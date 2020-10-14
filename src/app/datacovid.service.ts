@@ -12,11 +12,11 @@ import {Subject} from 'rxjs';
 export class DataCovidService{
   private url:string="https://api.covid19api.com/countries";
   private url1:string="https://api.covid19api.com/world/total";
- 
-  public message = new Subject<string>();
+   private Idselected:string;
+  // public message = new Subject<string>();
   constructor(private http:HttpClient)
   { 
-    
+
   }
   getCountries():Observable<IData[]>
     {
@@ -28,6 +28,10 @@ export class DataCovidService{
     }
     setMessage(value: string) {
       console.log(value);
-    this.message.next(value); 
+      this.Idselected=value;
+      console.log(this.Idselected);
+    // this.message.next(value); 
   }
+ 
+
 }
