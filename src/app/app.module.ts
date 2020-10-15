@@ -14,13 +14,13 @@ import { OrderModule } from 'ngx-order-pipe';
     FormsModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,OrderModule
   ],
   declarations: [
     AppComponent,
     HelloComponent,
     routingComponents,
-    CovidMeterComponent,OrderModule
+    CovidMeterComponent
   ],
   bootstrap: [AppComponent],
   providers: [DataService]
