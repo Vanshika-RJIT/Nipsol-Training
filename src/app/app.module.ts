@@ -7,9 +7,15 @@ import { HelloComponent } from './hello.component';
 import { AppRoutingModule,routingComponents } from './app-routing.module';
 import { DataService } from './data.service';
 import { CovidMeterComponent } from './covid-meter/covid-meter.component';
+import { AngularFireModule} from '@angular/fire';
+import { AngularFireDatabaseModule} from '@angular/fire/database';
+import  {firebase} from '../environment';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
+
+
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule,AppRoutingModule,ReactiveFormsModule,  HttpClientModule],
+  imports:      [ BrowserModule, FormsModule,AppRoutingModule,ReactiveFormsModule,  HttpClientModule,AngularFireModule.initializeApp(firebase.FireStore), AngularFireDatabaseModule],
   declarations: [ AppComponent, HelloComponent,routingComponents, CovidMeterComponent],
   bootstrap:    [ AppComponent ],
   providers:[DataService]
