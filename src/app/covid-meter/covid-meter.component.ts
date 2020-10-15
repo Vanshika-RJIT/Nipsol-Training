@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./covid-meter.component.css']
 })
 export class CovidMeterComponent implements OnInit {
-
+  
   constructor() { }
 
   ngOnInit() {

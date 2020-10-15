@@ -73,11 +73,11 @@ export class AddUserComponent implements OnInit {
       Record["phone"] = this.reactiveForm.value["Phone"];
       Record["address"] = this.reactiveForm.value["Address"];
       this.crudservice.createUser(Record).then(res => {
-        this.reactiveForm.value["Name"] = "";
+         this.reactiveForm.value["Name"] = "";
         this.reactiveForm.value["Email"] = "";
         this.reactiveForm.value["Phone"] = "";
         this.reactiveForm.value["Address"] = "";
-        console.log(res);
+       
       }).catch(error=>
       {
               console.log(error);
