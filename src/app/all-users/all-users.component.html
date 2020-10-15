@@ -3,7 +3,7 @@
 	<div class="col-sm-4 card-body border border-secondary m-3 bg-white"
 		style="border-radius: 10px; border:1px; box-shadow: 10px 10px 0px 7px rgba(143,136,143,1);"
 		*ngFor="let user of allUsersArray; index as i">
-		<button type="button" class="close" aria-label="Close" style="marginTop:-12px;">
+		<button type="button" class="close" aria-label="Close" (click)="deleteCard(user.name)"style="marginTop:-12px;">
 <span aria-hidden="true">×</span>  
 </button>
 

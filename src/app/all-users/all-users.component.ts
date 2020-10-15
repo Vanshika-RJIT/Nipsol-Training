@@ -1,5 +1,6 @@
 import { Component, OnInit ,Input, EventEmitter, Output} from '@angular/core';
 import {DataService} from '../data.service';
+import { CrudService } from "../crud.service";
 import {dataModel} from '../dataModel';
 
 @Component({
@@ -10,17 +11,15 @@ import {dataModel} from '../dataModel';
 export class AllUsersComponent implements OnInit {
       user:dataModel;
       allUsersArray:any[]=[];
-  constructor(private data:DataService) { }  
+  constructor(private data:DataService,private crudservice:CrudService) { }  
 
   ngOnInit() {
-    // this.data. teacherMessage$.subscribe((user:dataModel)=>
-    // {
-    //   this.user=user;
-   
-    // })
-    // ;
     this.allUsersArray=this.data.allUsersArray;
     console.log(this.allUsersArray);
-  }   
+  }  
+  deleteCard(record_name)
+  {
+    this.crudservice.deleteUser(record_name);
+  } 
 
 }  

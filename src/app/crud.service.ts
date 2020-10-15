@@ -16,4 +16,9 @@ export class CrudService{
          return this.fireservices.collection('Users').add(Record);
 
   }
+  deleteUser(record_name)
+  {
+    this.fireservices.doc('Users/'+record_name).delete();
+  }
+  
 }
