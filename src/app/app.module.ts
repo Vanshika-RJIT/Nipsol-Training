@@ -11,13 +11,14 @@ import { AngularFireModule} from '@angular/fire';
 import { AngularFireDatabaseModule} from '@angular/fire/database';
 import  {firebase} from '../environment';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
+import { CrudService } from './crud.service';
 
 
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule,AppRoutingModule,ReactiveFormsModule,  HttpClientModule,AngularFireModule.initializeApp(firebase.FireStore), AngularFireDatabaseModule],
+  imports:      [ BrowserModule, FormsModule,AppRoutingModule,ReactiveFormsModule,  HttpClientModule,AngularFireModule.initializeApp(firebase.FireStore), AngularFireDatabaseModule,AngularFirestoreModule],
   declarations: [ AppComponent, HelloComponent,routingComponents, CovidMeterComponent],
   bootstrap:    [ AppComponent ],
-  providers:[DataService]
+  providers:[DataService,CrudService]
 })
 export class AppModule { }
