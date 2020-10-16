@@ -13,7 +13,7 @@ export class AllUsersComponent implements OnInit {
       allUsersArray:any[]=[];
       User:any;
   constructor(private data:DataService,private crudservice:CrudService) { }  
-
+ 
   ngOnInit() {
     this.allUsersArray=this.data.allUsersArray;
     console.log(this.allUsersArray);
@@ -22,7 +22,12 @@ export class AllUsersComponent implements OnInit {
       this.User=data.map(e=>
       {
        return {
-         id:e.payload.doc.id
+         id:e.payload.doc.id,
+         name:e.payload.doc.data()['name'],
+         email:e.payload.doc.data()['email'],
+         phone:e.payload.doc.data()['phone'],
+         address:e.payload.doc.data()['address'],
+
        };
       })
          console.log(this.User);
