@@ -32,10 +32,6 @@ export class AddUserComponent implements OnInit {
     private crudservice: CrudService
   ) {}
   ngOnInit() {
-    //  this.data.teacherMessage$.subscribe(message=>
-    // {
-    //    this.name2=message;
-    // });
     this.id = 0;
     this.reactiveForm = this.fb.group({
       Name: ["", Validators.required],
